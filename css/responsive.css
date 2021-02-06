@@ -1,0 +1,122 @@
+@media(max-width:640px){
+   #navBar{
+    font-size: 10px;
+    padding-right: 800px;
+ }
+ .scroll-container h1{
+     font-size: 20px;
+ }
+ .about-me h1{
+     width: 500px;
+     font-size: 16px;
+     margin-right: 1200px;
+
+ }
+ .about-me p{
+    font-size: 10px;
+    width: 500px;
+    margin-right: 1000px;
+}
+
+main .img{
+    width: 50px;
+    height: 50px;
+    animation: none;
+}
+
+#down{
+    margin-top: 230px;
+}
+
+.skill2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 10px;
+  }
+  .popup .icons img{
+    width: 25px;
+    height: 25px;
+    
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 30vw;
+    height: 30vw;
+    
+  }
+
+    .popup{
+      width: 70%;
+    }
+  
+
+  .icons h4{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 5px;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40vw;
+    justify-content: space-evenly;
+  
+  }
+  .projectsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 120px;
+  
+  }
+  .projectsContainer .project {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 150px;
+    
+  }
+
+  .projectsContainer #down{
+      margin-bottom: 400px;
+  }
+
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .gallery_img {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform .5s; /* Animation */
+}
+.follow_container .media_div{
+    width: 20px;
+    height: 20px;
+    margin-top: 130px;
+  }
+
+  .gallery h2{
+      display: none;
+  }
+
+  #down{
+      display: none;
+  }
+
+}

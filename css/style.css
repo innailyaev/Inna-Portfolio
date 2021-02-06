@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Variables */
+:root{  
+ --primary-color:#58a0a8;
+ --secondary-color:#bae1ff;
+ --overlay-color: rgba(47, 110, 161, 0.85);
+ --menu-spped:0.75s;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+/* Smooth scrolling on the whole document elements */
+html {
+	scroll-behavior: smooth;
+}
+
+                              /* main styling */
+body{
+  height: 100vh; 
+  font-family: "Noto Sans JP";
+}
+
+header{
+  font-size: large;
+  height: 50px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.title h1{
+  font-size: 3rem;
+  height:fit-content;
+  padding-top: 50px;
+  text-align: center;
+  color:var(--primary-color);
+  margin-bottom: 30px;
+  animation: fadeInBottom ease 5s;            
+  z-index: -1;
+}
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+ }
+ 100% {
+    opacity: 1;
+    transform: translateY(0);
+ }
+}
+
+                                  /* sticky navBar */
+#navBar a{
+  text-decoration: none;
+  color: indianred;
+}
+
+#navBar{
+  width: 100%;
+  position: fixed;
+  padding:20px;
+}
+
+#navBar ul{
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  list-style: none;
+}
+
+#navBar li{
+  text-decoration: none;
+  padding-right: 25px;
+  justify-content: center;
+  
+}
+
+#navBar ul li a:hover{
+  background-color:#e5f8ff;
+}
+
+.name{
+  width: fit-content;
+  margin-top: 15px;
+  margin-left: 50%;
+  font-size: 70px;
+  font-family: 'Pacifico';
+  color:#bae1ff ;
+}
+
+                          /* all section's background design     */
+.Linear-Gradient {
+  height: 100vh;
+  width: 100%;
+  background:#212531;
+  background: linear-gradient(to left bottom,#ffffff 50%, #d1f3ff 50%); 
+}
+
+#skills-page.Linear-Gradient{
+  background: linear-gradient(to right bottom,#ffffff 50%, #ffddd1 50%); 
+}
+
+#projects-page.Linear-Gradient{
+  background: linear-gradient(to left bottom,#ffffff 50%, #d1ffdd 50%); 
+
+}
+
+#hobby-page.Linear-Gradient{
+  background: linear-gradient(to right bottom,#ffffff 50%,#f4d1ff 50%); 
+}
+
+
+
+                          /* image and about me */
+main{
+  display: flex;
+  justify-content:space-between;
+  
+}
+main .img{
+  background: url(/images/Inna.JPG) no-repeat center center/cover;
+  width: 350px;
+  height: 350px;
+  margin-left: 85px;
+  border-radius: 100px;
+  filter: grayscale(100%);  /*grayscale filter*/
+  transform: translateX(-120%);       /* i use translateX to make the image dissapear from the screen*/
+  animation: slide-in 2s ease-in forwards;      
+}
+
+@keyframes slide-in {                     
+  100% { 
+    transform: translateX(0%); }
+}
+
+.img:hover{
+  filter: none;
+}
+
+main .about-me{
+  width: 800px;
+  height: 200px;
+  margin-left: 300px;
+  margin-top: 30px;
+}
+.about-me{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-me h1{
+  font-size: 25px;
+  padding-bottom: 30px;
+  color:var(--primary-color);
+}
+
+.about-me p{
+  font-size: 20px;
+  color: darkblue;
+  font-weight:bold;
+  animation: fadeIn ease-in-out 5s;                  
+}
+
+@keyframes fadeIn {                          
+  0% {opacity:0;
+  }
+  100% {opacity:1;}
+  }
+
+#down{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  animation: blinkSign 3s infinite;
+  cursor: pointer; 
+}
+
+#down i{
+  color:var(--primary-color)
+}
+
+@keyframes blinkSign {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+                                                /* 2 SECTION */
+
+
+.skills1{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.skills1 .skill i{
+  color: white;
+}
+.skills1 .skill p{
+  color: white;
+}
+.skills1 .skill{
+text-align: center;
+height: 110px;
+width: 110px;
+padding-top: 25px;
+border-radius: 50%;
+background-color: var(--primary-color);
+}
+
+.skill2{
+  display: flex;
+  justify-content: center;
+  justify-content:space-evenly;
+  padding-top: 50px;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.stars{
+  display: flex;
+}
+
+.stars:hover{
+font-size: 20px;
+}
+
+.skill2 p{
+  width: 200px;
+  padding:10px;
+   
+}
+
+.skill2 .rightSide{
+  margin-right: 45px;
+}
+
+.skill2 span{
+  font-size: small;
+  padding-top: 20px;
+}
+.checked{
+  color:var(--secondary-color);
+}
+
+#skills-page #down{
+  margin-top:20px;
+}
+
+                                  /* 3 section - projects */
+
+.projectsContainer{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 120px;
+
+}
+
+.projectsContainer .project {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 230px;
+  height: 250px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.projectsContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+
+
+}
+
+.projectsContainer img:hover {
+  opacity: 0;
+  transition:opacity 1.5s;
+}
+
+.projectsContainer .project p {
+  z-index: -1;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  padding: 20px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--primary-color);
+  
+}
+
+.project h4{
+  margin-bottom: 20px;
+  color: darkblue;
+}
+
+                                            /* 5 section - Follow */
+#follow-page{
+  height: 50vh;
+  background: rgba(201,201,255,0.6);
+}
+
+ .follow_container{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.follow_container .media_div{
+  width: 70px;
+  height: 70px;
+}
+
+.follow_container .media_div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title h1{
+  font-size: 2rem;
+}
